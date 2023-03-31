@@ -1,0 +1,8 @@
+import json
+import jwt
+
+token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3OTE2NzM1OSwianRpIjoiODQ1MjE1NzQtYzJiZi00YWZiLTkxODItOWUwYjNiZmM5YzIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJlbWFpbF9pZCI6ImFiaGlAdGVzdC5jb20iLCJjbGllbnRfaWQiOjEzMH0sIm5iZiI6MTY3OTE2NzM1OSwiZXhwIjoxNjc5MTY3OTU5fQ.yI3FsX8ZYGpPKMooINEewK6ElTDso18KvG8HTBuSJ6I'
+token = token.split()[1]
+print(token)
+tok =  jwt.decode(token, 'my-secret-key', 'HS256')
+print(tok)
